@@ -24,7 +24,7 @@ node {
             script {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') 
                 {
-                    withCredentials([usernamePassword(credentialsId: 'gitlogin', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                    withCredentials([usernamePassword(credentialsId: 'shushant-patra', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
                         sh "git config user.email shushant.patra88@gmail.com"
                         sh "git config user.name shushant-patra"
