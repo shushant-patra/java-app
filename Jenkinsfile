@@ -10,7 +10,7 @@ node {
          sh "${mvnCMD} clean package"           
         }
     stage('Build image') {
-  
+      sh "whoami"    
        app = docker.build("cicdproject-408006/springboot")
     }
 
