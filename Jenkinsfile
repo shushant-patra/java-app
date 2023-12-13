@@ -31,7 +31,7 @@ node {
                         sh "sed -i 's+cicdproject-408006/springboot.*+cicdproject-408006/springboot:${env.BUILD_NUMBER}+g' spring-boot.yaml"
                         sh "git add ."
                         sh "git commit -m 'jenkinsbuild: ${env.BUILD_NUMBER}'"
-                        sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/javaapp.git HEAD:master"
+                        sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/java-app.git HEAD:master"
                 }
                     
                   }
